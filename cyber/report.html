@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cyber Crime Reporting Portal">
+    <meta name="author" content="A.K.">
+<style>
+    html, body {
+	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: none;
+	font-weight: 600;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+}
+
+hr {
+	border-color: #ffc266;
+	border-width: 5px;
+	max-width: 100%;
+}
+
+
+.container-h1 {
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 50px auto;
+    color: #333;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.btn {
+	color: #fff;
+	background-color: #182c39;
+	margin: 20px auto;
+	border-radius: 0;
+	font-weight: 500;
+	display: table;
+	padding: 10px;
+
+	
+}
+
+.btn:hover{
+	color: #182c39;
+	background-color: transparent;
+	border: 1px solid #182c39;
+}
+
+
+.hr-h3s {
+	border: 3px solid #E94B3C;
+	width: 70px;
+	margin: 0 auto 35px auto;
+}
+
+
+textarea {
+	resize: none;
+}
+
+section {
+	align-items: center;
+	padding: 50px 60px;
+	
+}
+.bg-section h2 {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: none;
+	color: #ffc266;
+	background-color: #182c39;
+	margin: 50px 0;
+	padding: 25px 20px;
+	border-radius: 50px;
+}
+
+.slideanim {
+	visibility: hidden;
+}
+
+.slide {
+	animation-name: slide;
+	-webkit-animation-name: slide;
+	-moz-animation-name: slide;
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	-moz-animation-duration: 1.5s;
+	visibility: visible;
+}
+
+@keyframes slide {
+	0% {
+		opacity: 0;
+		transform: translateX(50%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slide {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(50%);
+		transform: translateX(50%);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+	}
+}
+
+
+/*  ******* Header + Navigation ******* */
+
+.navbar {
+	background-color: #182c39;
+    border-color: rgb(51, 17, 0);
+	border-color: rgba(51, 17, 0, 0.2);
+	font-weight: 700;
+	padding: 15px 0;
+	transition: padding .5s;
+}
+
+.navbar .navbar-brand {
+	color: #fff;
+	font-family:inherit;
+	font-weight: 500;
+	text-transform: none;
+	font-size: 25px;
+	padding-left: 15px;
+	text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+	color: #be770c;
+	transition: color 3s;
+}
+
+.navbar .navbar-nav {
+	padding-right: 50px;
+}
+
+.navbar .navbar-nav > li > a {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 14px;
+	color: rgb(184, 75, 75);
+	margin: auto 5px;
+    font-family: 'Lato', sans-serif; 
+    text-shadow: #222 0.3em 0.3em 0.3em;   
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus:hover {
+	color: #ffc266;
+	transition: color 1s; 
+}
+
+
+.navbar .navbar-nav > li.active > a:hover,
+.navbar .navbar-nav > li.active > a:focus:hover {
+	background-color: transparent;
+}
+
+.navbar.scrolled {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+	padding: 5px 0;
+	opacity: 0.9;
+}
+
+.jumbotron {
+	margin-bottom: 0px;
+    background-image: url('https://th.bing.com/th/id/Rc1f2c869fc1348bc56dadc2c773ae414?rik=eJiDnR4yGWjeHA&riu=http%3a%2f%2fwww.nw3c.org%2fimages%2fhomepage%2fbkg_IS.jpg&ehk=n%2b9lHJX3cXVVJux965QK91LmS4wM%2fuQVMAnz9WEU2uk%3d&risl=&pid=ImgRaw');
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    height: 550px;
+}
+
+
+.jumbotron .header-content-inner {
+	font-weight: 700;
+	text-transform: none;
+	margin-bottom: 0;
+	margin: 200px;
+	font-family:' Roboto', 'Oxygen';
+}
+
+.jumbotron h1 {
+	font-size: 65px;
+}
+
+.jumbotron h3 {
+	font-size: 27px;
+}
+
+
+
+/* ******* Resources ******* */
+
+.bg-resource {
+	margin: auto 50px;
+	background-color: white;
+}
+
+#resource h3 {
+	font-family: 'Roboto', sans-serif;
+	color: #E94B3C;
+    
+
+}
+
+#resource .restaurant-history p {
+	padding: 2px 80px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	color: #444;
+}
+
+p.first::first-letter {
+    font-size: 150%;
+    color: #000;
+}
+
+#resource h1 {
+	padding-top: 35px;
+}
+
+
+#resource .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+#resource .hov-img * {
+	box-sizing: border-box;
+}
+
+#resource .hov-img {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+#resource .hov-img img {
+	max-width: 100%;
+}
+
+#resource .hov-img-bottom {
+	display: block;
+}
+
+#resource .hov-img-top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+    right: 0;
+	bottom: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+#resource .hov-img:hover .hov-img-top {
+	opacity: 1;
+}
+
+#resource .hov-img-text {
+	text-align: center;
+	font-size: 18px;
+	display: inline-block;
+	position: absolute;
+	text-shadow: black .2em .2em .2em; 
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#resource .hov-img-text p {
+	font-size: 15px;
+	line-height: 1.2em;
+}
+
+#resource .hov-img-slideup {
+	-moz-transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+#resource .hov-img:hover .hov-img-slideup {
+	-moz-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
+
+
+/* ******* cyber volunteer ******* */
+
+.bg-volunteer {
+	margin: auto 50px;
+}
+
+
+#volunteer .hr-menu {
+	border: 2px solid #182c39;
+	width: 100%;
+}
+
+#volunteer .list-group-item {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #555;
+	padding: 0 auto;
+}
+
+#volunteer .tab-content  .tab-pane  h3 {
+	text-align: center;
+	font-family: 'Leckerli One', cursive;
+}
+
+#volunteer .list-group-item:first-child {
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+#volunteer .list-group-item:last-child {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#volunteer .list-group-item  h4 {
+	text-align: left;
+	color: #182c39;
+	text-transform: none;
+	font-size: 18px;
+}
+
+#volunteer .list-group-item  p {
+	text-align: left;
+	color: #555555;
+	font-weight: 800;
+	font-style: italic;
+	text-transform: none;
+	font-size: 14px;
+    font-family: monospace;
+}
+
+#volunteer .badge {
+	border-radius: 0;
+	background-color: #444;
+	font-size: 12px;
+	color: #fff;
+}
+
+#volunteer .right-cover {
+	background-color: #fff;
+	color: #DC4C46;
+	text-shadow: #DC4C46 .4em .4em .4em;
+	padding: 10px;
+	text-transform: none;
+}
+
+
+/* ******* Service ******* */
+
+
+#service .service-round {
+	height: 100px;
+	width: 100px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 8px solid #182c39;
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	color: #182c39;
+}
+
+#service .service-round  i {
+	color: #182c39;
+	
+}
+
+#service h4 {
+	margin: 10px auto;
+	font-size: 20px;
+	color: #555;
+}
+
+#service .round:hover .fa {
+	color: #ffc266;
+	transition: color 2s;
+	
+}
+
+#service .round:hover .service-round {
+	border-color: #ffc266;
+	transition: border-color 2s;
+}
+
+
+
+
+/* ******* report ******* */
+
+
+#report h3 {
+	font-family: 'Lato', sans-serif;
+	text-transform: none;
+	color: #182c39;
+	margin: 50px auto 10px auto;
+	font-weight: 700;
+}
+
+
+.report{
+  margin: 0px;
+  width: 100%;
+  background-image: url(https://ak.picdn.net/shutterstock/videos/1034280875/thumb/1.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 40px;
+  font-size:20px ;
+  
+}
+.report h1{
+  font-weight: 40% ;
+  font-family:  'Rockwell', sans-serif;
+ color:rgb(255, 255, 255);
+}
+.uy{
+  font-size:25px ;
+  font-weight: 60;
+  color: #fff;
+}
+
+
+
+/* ******* Our staff ******* */
+
+
+
+#staff .thumbnail-row {
+	margin: auto 60px;
+}
+
+#staff h3 {
+	font-family: 'Lato', sans-serif;
+	text-transform: none;
+	color: #182c39;
+	margin: 50px auto 10px auto;
+}
+
+#staff img {
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+
+#staff  h5 {
+	color: #222;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
+#staff  h6 {
+	color: #555;
+	font-size: 16px;
+}
+
+#staff img:hover {
+	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.9);
+	transition: .3s;
+}
+
+
+
+
+/* ******* Contact ******* */
+
+#contact .form-group input, 
+#contact .form-group textarea {
+	border: 1px solid #000;
+	border-radius: 0;
+	
+	
+}
+
+#contact .form-group input:hover,
+#contact .form-group textarea:hover {
+	border-color: #ababee;
+	box-shadow: 2px 2px 2px rgba(0,0,0, .2);
+
+}
+
+#contact .contact-buttons input, 
+#contact .contact-buttons input:focus {
+	color: #fff;
+	background-color: #182c39;
+	margin: 20px auto 40px auto;
+	border-radius: 0;
+	font-weight: 500;
+	padding: 10px;
+	border: 1px solid #182c39;
+	cursor: pointer;
+}
+
+#contact .contact-buttons input:hover {
+	color: #182c39;
+	background-color: #fff;
+	
+}
+
+#contact .left-box {
+	background-color: #182c39;
+	margin: 0 20px;
+	font-size: 15px;
+	text-transform: none;
+	line-height: 1.8em;
+	font-weight: 500;
+	padding: 30px 50px;
+	color: #fff;
+}
+
+#contact .left-box .span-contact {
+	color: #ffc266;
+	font-weight: 700;
+	padding-right: 20px;
+	font-size: 17px;
+}
+
+#contact #googleMap {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+
+
+/* ***** Footer ***** */
+
+#footer {
+	background-color: #182c39;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+#footer ul {
+	list-style-type: none;
+	padding-left: 0;
+	line-height: 2.2;
+}
+
+#footer h5 {
+	font-size: 18px;
+	color: white;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#footer a {
+	color: #aaa;
+}
+
+#footer a:hover,
+#footer a:focus {
+	text-decoration: none;
+	color: white;
+}
+
+#footer .social-networks {
+	padding-top: 20px;
+	padding-bottom: 25px;
+}
+
+#footer .footer-items .fa {
+	font-size: 17px;
+	margin-bottom: 5px;
+	background-color: white;
+	color: #182c39;
+	border-radius: 50%;
+	padding-bottom: 25px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	line-height: 31px;
+	text-decoration: none;
+	transition: color 1s;
+}
+
+#footer .footer-items {
+	margin: auto;
+	padding-left: 50px;
+	font-size: 15px;
+}
+
+#footer .fa-facebook:hover,
+#footer .fa-instagram:hover {
+	border: 1px solid #fff;
+	color: #fff;
+	background-color: #182c39;
+}
+
+
+.footer-copyright {
+	background-color: #10222e;
+}
+
+.footer-copyright p {
+	text-align: center;
+	color: #ccc;
+	font-size: 15px;
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+
+#footer .hr-foot {
+	width: 80%;
+  	margin: 10px auto;
+  	border: 1px solid #fff;
+}
+
+#footer .to-top {
+	color: #fff;
+	font-size: 30px;
+	position: fixed;
+	right: 12px;
+	bottom: 12px;
+	height: 40px;
+	width: 40px;
+	text-decoration: none;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.5); 
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#footer .to-top:hover {
+	background-color: #222;
+	color: #fff;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.button {
+  background-color: #c92b2b; 
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display:inline;
+  font-size: 18px;
+  margin: 8px 9px;
+  cursor: pointer;
+  float:right;
+}
+.button3 {border-radius: 8px;}
+
+</style>
+</head>
+    <title>Cyber Crime Reporting Portal</title>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+
+    <!-- Custom CSS -->  
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="myPage"  data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Cyber Crime Reporting Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#resource">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#volunteer">Cyber Volunteer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#report">Report a crime</a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link" href="#service">Service</a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact us</a>
+                </li>  
+                
+            </ul>
+        </div>  
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container-fluid">
+            <div class="header-content-inner">
+                <h1>Cyber Crime Reporting Portal</h1> 
+                <h3> Let’s face it: the future is now. We are already living in a cyber society, so we need to stop ignoring it or pretending that is not affecting us .</h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-resource bg-section" id="resource">
+        <div class="container-fluid">
+            <h1 class="container-h1">Resources</h1>
+            <div class="row">
+                <div class="col-sm-5">
+
+                    <div class="hov-img">
+                        <img src="https://thelogicalindian.com/h-upload/2020/10/07/183090-whatsapp-image-2020-10-07-at-30806-pm.jpeg" alt="Warm welcome" class="hov-img-bottom img-fluid">
+                        <div class="hov-img-top hov-img-slideup">
+                            <div class="hov-img-text">
+                                <h5>Top cyber attacks.</h5>
+                                <p> Phishing Scams <br>
+                                    Website Spoofing <br>
+                                    Ransomware <br>
+                                    Malware <br>
+                                    IOT Hacking</p>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <div class="hov-img">
+                        <img src="https://cdn.kalingatv.com/wp-content/uploads/2019/06/Cyber-Crime-Complaint.jpg.jpg" alt="Delicious meals" class="hov-img-bottom img-fluid">
+                        <div class="hov-img-top hov-img-slideup">
+                            <div class="hov-img-text">
+                                <h5>Cyber crime law</h5>
+                                <p> The first cyber law was the Computer Fraud and Abuse Act, enacted in 1986. Known as CFAA, this law prohibits unauthorized access to computers and includes detail about the levels of punishment for breaking that law.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hov-img">
+                        <img src="https://specials-images.forbesimg.com/imageserve/5ebd3d75ef480d0007f31b59/960x0.jpg?fit=scale" alt="Professional staff" class="hov-img-bottom img-fluid">
+                        <div class="hov-img-top hov-img-slideup">
+                            <div class="hov-img-text">
+                                
+                                <h5>Malware</h5>
+                                <p>Malware is a catch-all term for any type of malicious software designed to harm or exploit any programmable device, service or network. Cybercriminals typically use it to extract data that they can leverage over victims for financial gain.</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-7">
+                    <div class="row ">
+                        <div class="restaurant-history slideanim text-center">
+                            <h3 class="section-heading">Reporting cyber crime</h3>
+                            <p class="about-history first"> Cybercrime can be particularly difficult to investigate and prosecute because it often crosses legal jurisdictions and even international boundaries. Additionally, an offender may disband one online criminal operation – only to start up a new activity with a new approach – before an incident even comes to the attention of the authorities.</p>
+                           <h3 class="section-heading">CYBER SAFETY</h3>
+                           <p class="about-history first"> &gt; Never share your personal details like house address, phone number, date of birth and place of birth etc. on any online platform such as Facebook,Instagram, Blogs, Twitter, Chat-rooms etc. </p>                     
+                          <p class="about-history first"> &gt; Assume that everything you put on a social networking site is permanent. Even if you delete your account, anyone on the Internet can easily print photos or text or save images or screenshots or videos in his device. </p>
+                           <p class="about-history first"> &gt;  Be careful using applications on social networking sites. Many of these come from third parties and may not be secure. Always check on the application provider first. </p> 
+                           <p class="about-history first"> &gt; When communicating through social media, be suspicious of any messages that are asking for sensitive business information or about employees and their families.. </p>
+                           <button type="button" class="btn more" id="more" data-toggle="collapse" data-target="#demo">More</button>
+                            <div id="demo" class="collapse">  
+                                <h3 class="section-heading">Evidence to collect</h3>
+                                <p class="about-history">Even though you may not be asked to provide evidence when you first report the cybercrime, it is very important to keep any evidence you may have related to your complaint. Keep items in a safe location in the event you are requested to provide them for investigative or prosecutive evidence.</p>
+                                <p class="about-history first"> &gt; Printed or preferably electronic copies of emails (if printed, include full email header information) </p>       
+                                <p class="about-history first"> &gt; Cancelled checks, Certified or other mail receipts </p>  
+                                <p class="about-history first"> &gt; Log files, if available, with date, time and time zone </p>  
+                                <p class="about-history first"> &gt; Social media messages, Money order receipts , Pamphlets or brochures and Phone bills </p>
+                                   
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>     
+        </div>
+    </section>
+
+  <!-- volunteer -->
+    <section class="bg-volunteer bg-section" id="volunteer">
+        <div class="container-fluid">
+            <h1 class="container-h1">Cyber Volunteer</h1>
+            <div class="row">
+         <div class="tab-content slideanim">
+                        <div id="VIDEO" class="tab-pane fade show active">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                          <h4 class="list-group-item-heading">Cyber Crime Volunteer Scheme</h4>
+                                          <p class="list-group-item-text">The Ministry of Home Affairs's “cybercrime volunteers” plan targets to rope in around 500 persons to flag unlawful content on the Internet for “improvement in the cybercrime ecosystem of India”. The programme will include 200 “cyber awareness promoters” and 50 “cyber experts”.</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <h4 class="list-group-item-heading">Cyber Crime Volunteer Concept</h4>
+                                          <p class="list-group-item-text">Indian Cyber Crime Coordination Centre (I4C) has been established under Ministry of Home affairs (MHA) to act as a nodal point at National level in the fight against cybercrime. It aims to provide a platform to deal with cybercrimes in a coordinated and comprehensive manner.
+                                         </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <h4 class="list-group-item-heading">Terms and Conditions to regsiter</h4>
+                                          <p class="list-group-item-text"> Volunteer shall sign a declaration of acceptance of terms and conditions of this program. Volunteer shall be de-registered in case of violation/breach of any of the terms and conditions of ‘Cyber Volunteer Program’.   </p>
+                                      
+                                        </li>
+                  
+                                        <li class="list-group-item">
+                                          <h4 class="list-group-item-heading">Register and Volunteer !</h4>
+                                          <p class="list-group-item-text">For any society to feel safe and secure, citizen support enhances the efficacy of police efforts. Cyber Crime Volunteer Program aims to bring together citizens having passion to serve the society in making the cyber space clean and safe. Any Indian citizen can associate by registering. <br> <button class="button button3">Register Now</button></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="right-cover">
+                                        <iframe width="420" height="345"  src="https://www.youtube.com/embed/Ls8jyO46bmI">
+                                        </iframe>
+                                 
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+                      
+<!---services-->
+    <section class="bg-service bg-section" id="service">
+        <div class="container-fluid text-center">
+            <h1 class="container-h1">Our Service</h1>
+
+            <div class="row service-round-3 slideanim">
+                <div class="col-sm-4 text-center round">
+                    <div class="service-round b-party">
+                        <i class="fa fa-4x fa fa-phone sr-icons"></i>
+                    </div>
+                    <h4>Helpline 24/7</h4>
+                    <p>For more information please contact us.</p>
+                </div>
+                <div class="col-sm-4 text-center round">
+                    <div class="service-round wedding">
+                        <i class="fa fa-4x fa fa-envelope sr-icons"></i>
+                    </div>    
+                    <h4>Mail us through our official website</h4>
+                    <p>For more information please contact us</p>
+                </div>
+                <div class="col-sm-4 text-center round">
+                    <div class="service-round b-dinner">
+                        <i class="fa fa-4x fa fa-question sr-icons"></i>
+                       
+                    </div>
+                    <h4>Report your compliant and we assure to help you.</h4>
+                    <p>For more information please contact us.</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn">Contact us</a>
+        </div>
+    </section>
+    <!--report-->
+      <section id="report" class="bg-report no-padding">
+        <div class="container-fluid">
+            <h3>Report a Cyber-Crime Complaint</h3>
+            <hr class="hr-h3s">
+            <div class="row no-gutter report slideanim"> 
+    <h1>Filing a Complaint on Cyber Crime Reporting Portal </h1> 
+  <uy class ="uy">This portal is an initiative to facilitate victims/complainants to report cyber crime complaints online. This portal caters to complaints pertaining to cyber crimes only with special focus on cyber crimes against women and children.Complaints reported on this portal are dealt by law enforcement agencies/ police based on the information available in the complaints. It is imperative to provide correct and accurate details while filing complaint for prompt action.</uy>
+  <a href="action1.html" class="btn">Report a Complaint</a>
+  <a href="action2.html" class="btn">Report Anonymously</a>
+</div>
+               
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-staff" id="staff">
+        <div class="container-fluid">
+            <h3>Our staff</h3>
+            <hr class="hr-h3s"> 
+                <div class="row text-center slideanim thumbnail-row">
+                    <div class="col-sm-3">
+                        <div class="staff">
+                            <img src="https://res.cloudinary.com/dbte0ueti/image/upload/v1536952566/new/manager.jpg" class="" alt="chef-img" style="width:170px; height: 170px">
+                            <h5 class="">John Johnson</h5>
+                            <h6>Cyber Head Manager</h6>    
+                        </div>
+                     </div>
+                     <div class="col-sm-3">  
+                        <div class="staff">
+                            <img src="https://res.cloudinary.com/dbte0ueti/image/upload/v1536952565/new/chef1.jpg" class="" alt="chef-img" style="width:170px; height: 170px">
+                            <h5 class="">Anna Schmidt</h5>
+                            <h6>Cyber Analyst</h6>         
+                        </div>
+                    </div>  
+                    <div class="col-sm-3">  
+                        <div class="staff">
+                            <img src="https://res.cloudinary.com/dbte0ueti/image/upload/v1536952566/new/chef3.jpg" class="" alt="chef-img" style="width:170px; height: 170px">
+                            <h5 class="">Ivan Gonzales</h5>
+                            <h6>Cyber Crime Head</h6>
+                        </div>
+                    </div>
+                      <div class="col-sm-3">  
+                        <div class="staff">
+                            <img src="https://res.cloudinary.com/dbte0ueti/image/upload/v1536952566/new/chef2.jpg" class="" alt="chef-img" style="width:170px; height: 170px">
+                            <h5 class="">Joseph Martinez</h5>
+                            <h6>Cyber Crime Investigator</h6>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+<!--contact-->
+
+    <section class="bg-contact bg-section" id="contact">
+        <div class="container-fluid">
+            <h1 class="container-h1">Contact us</h1>
+            <div class="row slideanim">
+                <div class="col-md-6 col-sm-6 contact-left">
+                    <div class="left-box">
+                        <address class="contact">
+                            <span class="span-contact">Call:</span>
+                            <br>
+                            +091 1234 5678
+                            <br> 
+                            <span class="span-contact">Email:</span> 
+                            <br>
+                            cybercrime@gmail.com
+                            <br>
+                            <span class="span-contact">Visit:</span>  
+                            <br>
+                            22, Richards Road
+                            <br>
+                            Melbourne, Victoria
+                            <br>
+                            Australia
+                        </address>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 contact-right" >
+                            
+                            <form novalidate action="mailto:cybercrime@gmail.com" name="frm" method="post">
+                                 <div class="form-group has-feedback">
+                                    <label class="sr-only">First name:</label>
+                                    <input type="text" name="name" class="form-control" placeholder="First name" required>
+                                    
+                                </div>
+                                 <div class="form-group has-feedback">
+                                    <label class="sr-only">Last name:</label>
+                                    <input type="text" name="surname" class="form-control" placeholder="Last name" required>
+                                    
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="sr-only">Email:</label>
+                                    <input type="email" name="email" class="form-control"  placeholder="Email" required>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" name="comment" for="comment">Report an issue..</label>
+                                    <textarea class="form-control" rows="5" id="comment" placeholder="Report an issue.."></textarea>
+                                </div>
+                                <div class="contact-buttons pull-left">
+                                    <input type="submit" name="submit"  value="Send" />
+                                    <input type="reset" value="Reset" />
+                                </div>
+                            </form>
+                            
+                </div>
+            </div>
+          
+        </div>    
+    </section>
+
+    <footer class="-bg-footer" id="footer">
+        <div class="container-fluid">
+            <div class="row footer-align">
+                <div class="col-md-4 col-sm-4">
+                    <h5>Cyber Crime Portal</h5>
+                    <hr class="hr-foot">
+                    <div class="footer-items">
+                        <p class="footer">
+                         It is a specialised unit that handles all complex and sensitive cases of cyber crime including those in which victims are women and children. The Cyber Crime Cell is equipped with a state-of–the-art Cyber Lab having cyber forensic capabilities such as extraction of deleted data from Hard Disks and mobile phones, imaging and hash value calculation, forensic servers,etc. 
+                        </p>
+                        <ul class="social-networks">
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <h5>Our contact</h5>
+                    <hr class="hr-foot">
+                    <div class="footer-items">
+                        <address>
+                                22, Richards Road
+                                <br>
+                                Melbourne, Victoria
+                                <br>
+                                Australia
+                                <br>
+                                <i class="fa fa-phone address"></i> +091 1234 5678
+                                <br>
+                                <i class="fa fa-fax address"></i> +876 5432 1234
+                                <br>
+                                <i class="fa fa-envelope address"></i> <a href="mailto:cybercrime@gmail.com">cybercrime@gmail.com</a>
+                        </address>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <h5>Open hours</h5>
+                    <hr class="hr-foot">
+                    <div class="footer-items">
+                        <ul>
+                        
+                            <li>Mon-Fri: 08:00-22:00</li>
+                            <li>Sat    : 09:00-22:00</li>
+                            <li>Sun    : 09:00-16:00</li> 
+                            <li>24/7 on call for emergency Helpline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a class="to-top" href="#myPage" title="toTop">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </footer>
+
+    <div class="footer-copyright">
+            <p>&copy 2020 Copyright by  <a href="http://www.cybercrimereport.com" target="blank">cybercrimereport.com</a></p>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+     /* Navbar scroll */
+$(function(){
+
+var nav = $('.navbar'),
+    doc = $(document),
+    win = $(window);
+
+win.scroll(function() {
+
+    if (doc.scrollTop() > 80) {
+        nav.addClass('scrolled');
+    } else {
+        nav.removeClass('scrolled');
+    }
+
+});
+
+win.scroll();
+
+});
+
+
+/* ***** Btn More-Less ***** */
+$("#more").click(function(){
+var $this = $(this);
+$this.toggleClass('more');
+if($this.hasClass('more')){
+    $this.text('More');         
+} else {
+    $this.text('Less');
+}
+});
+
+
+
+
+/* ***** Slideanim  ***** */
+$(window).scroll(function() {
+$(".slideanim").each(function(){
+var pos = $(this).offset().top;
+
+var winTop = $(window).scrollTop();
+if (pos < winTop + 600) {
+  $(this).addClass("slide");
+}
+});
+}); 
+
+
+
+
+/* ***** Smooth Scrolling  ***** */
+$(document).ready(function(){ 
+$(".navbar a, #service a").on('click', function(event) {
+
+if (this.hash !== "") {
+event.preventDefault();
+var hash = this.hash;
+
+$('html, body').animate({
+  scrollTop: $(hash).offset().top
+}, 900, function(){
+
+  window.location.hash = hash;
+  });
+} 
+});
+
+
+/* ***** Scroll to Top ***** */ 
+$(window).scroll(function() {
+  if ($(this).scrollTop() >= 300) {        
+      $('.to-top').fadeIn(200);    
+  } else {
+      $('.to-top').fadeOut(200);   
+  }
+});
+$('.to-top').click(function() {      
+  $('.body,html').animate({
+      scrollTop : 0                       
+  }, 500);
+});
+
+})
+    </script>  
+    
+</body>
+
+</html>
